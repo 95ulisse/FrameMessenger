@@ -18,6 +18,7 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'build/pre.js',
+					'src/ie.js',
 					'src/Observable.js',
 					'src/Message.js',
 					'src/FrameMessenger.js',

@@ -1,11 +1,11 @@
-/*global Message:false, Observable:false */
+/*global Message:false, Observable:false, ie:false */
 /*jshint -W098, -W068*/
 
 //Main FrameMessenger class
 var FrameMessenger = (function () {
 	/*jshint +W098*/
 
-	var postMessageOnlyStrings = false;
+	var postMessageOnlyStrings = typeof ie === 'number' && ie <= 8;
 	function sendMessage(window, message) {
 		var origin = location.protocol + '//' + location.host;
 		message = message.toJSON();
