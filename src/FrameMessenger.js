@@ -27,7 +27,7 @@ var FrameMessenger = (function () {
 				return cache[name] || (cache[name] = new Observable());
 			}
 			currentWindow.addEventListener('message', function (e) {
-				e = e.originalEvent;
+				e = e.originalEvent || e;
 				if (e.origin !== location.protocol + '//' + location.host)
 					return;
 				var data = e.data;
