@@ -4,7 +4,7 @@
   "description": "A simple library to pass messages around frames",
   "author": "Marco Cameriero",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.4",

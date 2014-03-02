@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				banner: '<%= banner %>',
 				stripBanners: true
 			},
-			dist: {
+			out: {
 				src: [
 					'build/pre.js',
 					'src/ie.js',
@@ -24,16 +24,16 @@ module.exports = function(grunt) {
 					'src/FrameMessenger.js',
 					'build/post.js'
 				],
-				dest: 'dist/<%= pkg.name %>.js'
+				dest: 'out/<%= pkg.name %>.js'
 			}
 		},
 		uglify: {
 			options: {
 				banner: '<%= banner %>'
 			},
-			dist: {
-				src: '<%= concat.dist.dest %>',
-				dest: 'dist/<%= pkg.name %>.min.js'
+			out: {
+				src: '<%= concat.out.dest %>',
+				dest: 'out/<%= pkg.name %>.min.js'
 			}
 		},
 		jshint: {
